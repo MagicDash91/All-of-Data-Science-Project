@@ -1,4 +1,4 @@
-# Streamlit Web Application Project
+# Streamlit Web Application Project with Google Gemini
 This repository is for all of my Streamlit Web Application that created by myself. Use this code for your reference only, modify this code if you want to use the real time poject
 
 ## 1. Auto Sentiment Analysis Twitter (Google Gemini)
