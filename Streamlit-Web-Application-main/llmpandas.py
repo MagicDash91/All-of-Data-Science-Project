@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 # Load language model
 llm = ChatGroq(
     model_name="mixtral-8x7b-32768",
-    api_key="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")
+    api_key="YOUR_GROQ_API")
 
 def main():
     st.title("Ask your CSV")
@@ -56,7 +56,7 @@ def main():
                         text = text.replace('•', '  *')
                         return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
-                    genai.configure(api_key="AIzaSyB2sQh_oHbFULJ7x2vixJWAboPpPvrCKoA")
+                    genai.configure(api_key="YOUR_GOOGLE_GEMINI_API")
                     model = genai.GenerativeModel('gemini-pro-vision')
 
                     img1 = Image.open("result.png")
