@@ -6,3 +6,9 @@ This project is analyzing the CSV file with Langchain CSV Agent. The user will a
 
 ## 2. Langchain Analyze PDF
 This project analyzing the context of the PDF File with Langchain and then it will answer based on the users question
+
+## 3. Langchain Analyze Youtube Video
+This project analyzing the context of the Youtube Video with Langchain and then it will answer based on the users question
+
+## 4. Langchain Analyze Website
+This project analyzing the context of the Website with Langchain and then it will answer based on the users question
