@@ -13,7 +13,7 @@ def langchain_pdf():
     nest_asyncio.apply()
 
     # Initialize Model
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyDPY2juPQenQ6ceeZI-EVaj0Cg_AYWXAz0")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key="AIzaSyAQLXJ6ROBzMycImPVp2jTlbB3zIpEWmhM")
 
     # Input for PDF file
     uploaded_file = st.file_uploader("Upload PDF", type=["pdf"])
@@ -64,7 +64,7 @@ def langchain_doc():
     nest_asyncio.apply()
 
     # Initialize Model
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyDPY2juPQenQ6ceeZI-EVaj0Cg_AYWXAz0")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key="AIzaSyAQLXJ6ROBzMycImPVp2jTlbB3zIpEWmhM")
 
     # Input for PDF file
     uploaded_file = st.file_uploader("Upload PDF", type=["docx"])
@@ -115,7 +115,7 @@ def langchain_excel():
     nest_asyncio.apply()
 
     # Initialize Model
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyDPY2juPQenQ6ceeZI-EVaj0Cg_AYWXAz0")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key="AIzaSyAQLXJ6ROBzMycImPVp2jTlbB3zIpEWmhM")
 
     # Input for PDF file
     uploaded_file = st.file_uploader("Upload PDF", type=["xlsx"])
@@ -131,7 +131,7 @@ def langchain_excel():
 
             # Load the PDF file
             loader = UnstructuredExcelLoader("file.xlsx", mode="elements")
-            docs = loader.load_and_split()
+            docs = loader.load()
 
             # Define the Summarize Chain
             template = question + """ Write a concise summary of the following:
@@ -165,7 +165,7 @@ def langchain_ppt():
     nest_asyncio.apply()
 
     # Initialize Model
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyDPY2juPQenQ6ceeZI-EVaj0Cg_AYWXAz0")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key="AIzaSyAQLXJ6ROBzMycImPVp2jTlbB3zIpEWmhM")
 
     # Input for PDF file
     uploaded_file = st.file_uploader("Upload PDF", type=["pptx"])
@@ -215,7 +215,7 @@ def langchain_csv():
     nest_asyncio.apply()
 
     # Initialize Model
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyDPY2juPQenQ6ceeZI-EVaj0Cg_AYWXAz0")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key="AIzaSyAQLXJ6ROBzMycImPVp2jTlbB3zIpEWmhM")
 
     # Input for PDF file
     uploaded_file = st.file_uploader("Upload PDF", type=["csv"])
@@ -231,7 +231,7 @@ def langchain_csv():
 
             # Load the PDF file
             loader = CSVLoader(file_path="file.csv")
-            docs = loader.load_and_split()
+            docs = loader.load()
 
             # Define the Summarize Chain
             template = question + """ Write a concise summary of the following:
@@ -265,7 +265,7 @@ def langchain_web():
     nest_asyncio.apply()
 
     # Initialize Model
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyDPY2juPQenQ6ceeZI-EVaj0Cg_AYWXAz0")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key="AIzaSyAQLXJ6ROBzMycImPVp2jTlbB3zIpEWmhM")
 
     # Input for article link
     article_link = st.text_input("Enter the link to the article:")
@@ -279,7 +279,7 @@ def langchain_web():
         else:
             # Load the article content
             loader = WebBaseLoader(article_link)
-            docs = loader.load_and_split()
+            docs = loader.load()
 
             # Define the Summarize Chain
             template = question + """ Write a concise summary of the following:
@@ -311,7 +311,7 @@ def langchain_youtube():
     nest_asyncio.apply()
 
     # Initialize Model
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyDPY2juPQenQ6ceeZI-EVaj0Cg_AYWXAz0")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key="AIzaSyAQLXJ6ROBzMycImPVp2jTlbB3zIpEWmhM")
 
     # Input for article link
     youtube_link = st.text_input("Enter the YouTube link:")
@@ -330,7 +330,7 @@ def langchain_youtube():
                 language=["en", "id"],
                 translation="en",
             )
-            docs = loader.load_and_split()
+            docs = loader.load()
 
             # Define the Summarize Chain
             template = question + """ Write a concise summary of the following:
