@@ -35,3 +35,6 @@ This web Application allows to help the doctor and medical officer to analyze ab
 
 ## 11. LLM Pandas AI and Google Gemini Analysis
 This web Application allows to analyze your CSV Dataset and let the user ask anything about their Dataset, then PandasAI will give the answer based on the user question (answers can be dataframe or visualization) and lastly Google Gemini will give some explanation if the answer is a visualization
+
+## 11. PDF Documents Comparer
+This web Application allows to analyze your PDF File with Langchain and Google Gemini. The users allows to upload 2 PDF File and then ask any question about both PDF File. Then Google Gemini wull analyze the documents
